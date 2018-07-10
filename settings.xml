@@ -161,7 +161,7 @@ under the License.
       <id>mirrorId</id>
       <mirrorOf>*</mirrorOf>
       <name>Mirror of central repository.</name>
-      <url>http://117.78.32.218/nexus/content/groups/public</url>
+      <url>http://maven.huaweicse.com/nexus/content/groups/public</url>
     </mirror>
  </mirrors>
 
