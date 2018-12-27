@@ -1,4 +1,4 @@
-from 100.125.0.198:20202/servicestage/mysqlutf8:0.2
+from swr.cn-north-1.myhuaweicloud.com/servicestage/mysqlutf8:0.2
 COPY ./init-db/target/sql /sql
 COPY ./init-db/target/entrypoint.sh /
 RUN chmod +x /entrypoint.sh

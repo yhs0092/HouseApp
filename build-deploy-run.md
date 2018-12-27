@@ -3,7 +3,7 @@
 ### 软件下载及准备
 ```
 cd /home
-yum update
+yum -y update
 yum install -y git  wget
 git clone https://github.com/JeffyLiu003/HouseApp.git
 wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
@@ -25,7 +25,8 @@ java -version
 2. 执行 ```bash build-images.sh build <your tag>``` 本地构建镜像
 3. 在 ServiceStage 镜像仓库创建 namespace/仓库 
 4. 执行 docker login 登录到远程镜像中心
-5. 执行 ```bash build-images.sh push <your tag> <your repo namespace> ``` 将本地镜像推送到远程仓库
+5. 修改 build-images.sh 脚本中的仓库地址为用户自身的仓库地址，将100.125.0.198:20202/maoxuepeng6459 修改为 swr.cn-north-1.myhuaweicloud.com/image-hub
+5. 执行 ```bash build-images.sh push <your tag> ``` 将本地镜像推送到远程仓库
 
 ### Deploy
 #### 1. 创建RDS（MySQL），并创建业务数据库与表

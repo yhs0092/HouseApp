@@ -1,4 +1,4 @@
-FROM 100.125.0.198:20202/hwcse/dockerhub-java:8-jre-alpine
+FROM swr.cn-north-1.myhuaweicloud.com/hwcse/dockerhub-java:8-jre-alpine
 RUN mkdir -p /home/apps/server
 COPY ./account-service/target/account-service-0.0.1-SNAPSHOT.jar /home/apps/server
 COPY ./account-service/target/lib/ /home/apps/server/lib

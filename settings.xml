@@ -158,10 +158,9 @@ under the License.
     </mirror>
      -->
     <mirror>
-      <id>mirrorId</id>
-      <mirrorOf>*</mirrorOf>
-      <name>Mirror of central repository.</name>
-      <url>http://maven.huaweicse.com/nexus/content/groups/public</url>
+      <id>huaweicloud</id>
+      <mirrorOf>*,!HuaweiCloudSDK</mirrorOf>
+      <url>https://mirrors.huaweicloud.com/repository/maven/</url>
     </mirror>
  </mirrors>
 
@@ -261,6 +260,31 @@ under the License.
 			</repository>
 		</repositories>
 	</profile>-->
+    <profile>
+    <id>MyProfile</id>
+    <repositories>
+        <repository>
+            <id>HuaweiCloudSDK</id>
+            <url>https://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    </profile>
+
+   <profile>
+    <id>nexusProfile</id>
+    <repositories>
+        <repository>
+            <id>cse1</id>
+            <url>http://maven.huaweicse.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+   </profile>
   </profiles>
   
   <!-- activeProfiles
@@ -271,4 +295,8 @@ under the License.
     <activeProfile>anotherAlwaysActiveProfile</activeProfile>
   </activeProfiles>
   -->
+  <activeProfiles>
+    <activeProfile>MyProfile</activeProfile>
+    <activeProfile>nexusProfile</activeProfile>
+  </activeProfiles> 
 </settings>
