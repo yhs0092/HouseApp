@@ -78,7 +78,7 @@ TAG=$2
 SERVICES_PATTERN=$3
 SERVICES_PATTERN="${SERVICES_PATTERN:-"*-service|*-website|loadtestclient|tx-coordinator|init-db"}"
 REMOTE_REPO=$4
-REMOTE_REPO="${REMOTE_REPO:-"swr.cn-north-1.myhuaweicloud.com/huaweiofficial"}"
+REMOTE_REPO="${REMOTE_REPO:-"swr.cn-north-1.myhuaweicloud.com/huawei-paas-poc"}"
 
 RELATIVE_PATH="`dirname $0`"
 cd "${RELATIVE_PATH}"
